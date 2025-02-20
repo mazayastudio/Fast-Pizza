@@ -6,7 +6,9 @@ import Home from "./ui/Home.jsx";
 import Menu, {loader as menuLoader} from "./features/menu/Menu.jsx";
 import Order, {loader as orderLoader} from "./features/order/Order.jsx";
 import Cart from "./features/cart/Cart.jsx";
-import CreateOrder from "./features/order/CreateOrder.jsx";
+import CreateOrder, {
+  action as orderAction
+} from "./features/order/CreateOrder.jsx";
 
 
 const router = createBrowserRouter([
@@ -30,8 +32,10 @@ const router = createBrowserRouter([
         errorElement: <Error />
       },
       {
-        path   : '/order/new',
-        element: <CreateOrder />
+        path        : '/order/new',
+        element     : <CreateOrder />,
+        action      : orderAction,
+        errorElement: <Error />
       },
       {
         path   : '/cart',
