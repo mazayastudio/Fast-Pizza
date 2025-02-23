@@ -54,7 +54,6 @@ export const {
   clearCart,
   increaseQuantity,
   decreaseQuantity,
-  updateQuantity,
 } = cartSlice.actions;
 
 // 4. export the reducer
